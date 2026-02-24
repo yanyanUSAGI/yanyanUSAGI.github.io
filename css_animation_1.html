@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations 1</title>
+    <style>
+        
+        /*animate pg bg-color*/
+        body {background-color: black;
+            animation-name: example-1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;}
+        
+        /*use the same name as animation-name*/
+        @keyframes example-1 {
+            0% {background-color: black;}
+            25% {background-color: black;}
+            50% {background-color: white;}
+            75% {background-color: white;}
+            100% {background-color: black;}
+        }
+
+        /*animate the height and position of a div*/
+        div#red {position: absolute;
+            box-sizing: border-box;
+            bottom: 0px;
+            left: 100px;
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            animation-name: example-2;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;}
+
+        @keyframes example-2 {
+            from {height: 100px;
+                left: 100px;}
+            to {height: 100%;
+                left: 600px;}
+        }
+
+        /*add hover state to pause animation*/
+        div:hover {animation-play-state: paused;}
+
+    </style>
+</head>
+<body>
+    
+    <h1 style="color:black;">
+        This Background is White
+    </h1>
+
+    <h1 style="color:white;">
+        This Background is Black
+    </h1>
+
+    <div id="red"></div>
+</body>
+</html>

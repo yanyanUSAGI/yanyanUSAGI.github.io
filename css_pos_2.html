@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            CSS Float & Clear....and Gradient Backgrounds
+        </title>
+
+        <style>
+
+            body {background-image: linear-gradient(lightgreen,darkgreen);
+                background-repeat: no-repeat;
+                background-color: darkgreen;}
+
+            div {position: static;
+                box-sizing: border-box;
+                width: 300px;
+                height: 300px;
+                text-align: center;
+                color: white;
+                font-family: comic sans ms;
+                font-size: 20px;}
+
+            div#leo {background-color: blue;
+                float: left;
+                border-top-left-radius: 25px;/*rounds the corner of the div*/}
+
+            div#don {background-color: purple;
+                float: left;
+                border-top-right-radius: 25px;}
+
+            div#raph {background-color: red;
+                float: left;
+                clear: both;
+                border-bottom-left-radius: 25px;}
+
+            div#mike {background-color: orange;
+                float: left;
+                border-bottom-right-radius: 25px}
+
+            div#container {width: 800px;
+                height: 800px;
+                background-color: black;
+                padding-left: 96px;
+                padding-right: 96px;
+                /*center this box*/
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 50px;
+                border: 2px solid deeppink;
+                box-shadow: 5px 5px 0px deeppink;}
+
+            header {width: 100%;
+                box-sizing: border-box;
+                position: static;}
+
+            footer {clear: both;
+                padding-top: 10px;
+                font-size: 24px;
+                color: greenyellow;}
+
+            @font-face {
+                font-family: font1;
+                src: url(fonts/turtles.otf); /*my font is in a folder*/
+            }
+
+            h1 {font-family: font1;
+                color: greenyellow;
+                font-size: 50px;
+                letter-spacing: 6px;
+                word-spacing: 8px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                text-shadow: 3px 3px 0px deeppink;}
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+
+            <header>
+                <h1> Teenage Mutant Ninja Turtles </h1>
+            </header>
+
+            <div id="leo">
+                <img src="pics/leo.png" alt="Leonardo"> <!--add ur image mine is in a folder so it might not show for you--> 
+                Leonardo
+            </div>
+            <div id="don">
+                <img src="pics/don.png" alt="Donatello">
+                Donatello
+            </div>
+            <div id="raph">
+                <img src="pics/raph.png" alt="Raphael">
+                Raphael
+            </div>
+            <div id="mike">
+                <img src="pics/mike.png" alt="Michaelangelo">
+                Michaelangelo
+            </div>
+
+            <footer>
+                Heroes in a Half Shell!
+            </footer>
+    
+        </div> <!--end of container-->
+
+    </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+
+        <!-- Bootstrap CSS file -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <!-- Bootstrap JS file -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            function showBrowserSize() {
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                document.getElementById("sizeInfo").innerHTML = "Width: " + w + "<br>Height: " + h;
+            }
+        </script>
+
+        <style>
+
+            div#sizeInfo {position: fixed;
+            box-sizing: border-box;
+            background-color: gray;
+            width: 100px;
+            height: 50px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 999;
+            display: block; /* change to none later */}
+            
+            /* CSS for under 576px - extra small - default values */
+            body {background-color: lightpink;
+                background-image: url(pics/flowerskull.jpg);
+                background-repeat: repeat;
+                background-size: auto auto;}
+
+            .container {background-color: #eeeeee;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);}
+
+            .row {background-color: transparent;}
+
+            /*apply temporary border to grandchildren of container*/
+
+            .container > div > * {padding-top: 10px;}
+
+            @font-face {
+            font-family: font1;
+            src: url(fonts/TitilliumWeb-BoldItalic.ttf);}
+
+            h1 {margin-bottom: 20px;
+                text-align: center;
+                font-family: font1;
+                color: black;
+                text-decoration: underline;}
+
+            @font-face {
+            font-family: font2;
+            src: url(fonts/TitilliumWeb-Regular.ttf);}
+
+            p {font-size: 110%;
+                padding: 10px;
+                font-family: font2;
+                color: black;
+            }
+
+            img {max-width: 100%;
+                margin-bottom: 20px; 
+                }
+
+            /* between 576-767 - small */
+            @media (min-width: 576px) {
+                body {background-image: url(pics/skulls.jpg);}
+
+                .container {box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);}
+
+                h1 {text-align: center;}
+
+                p {text-align: center;}
+            }
+
+            /* between 768-991 - medium  */
+            @media (min-width: 768px) {
+                body {background-image: url(pics/eyes.jpg);}
+
+                .container {box-shadow: 4px 4px 10px rgba(71, 19, 19, 0.852);}
+
+                p {font-size: 120%;
+                    line-height: 1.5;}
+            }
+
+            /* between 992-1199 - large  */
+            @media (min-width: 992px) {
+                body {background-image: url(pics/skeletons.jpg);}
+
+                .container {box-shadow: 4px 4px 10px rgba(248, 219, 219, 0.643);}
+
+                p {font-size: 125%;}
+            }
+
+            /* between 1200-1399 - extra-large */
+            @media (min-width: 1200px) {
+                body {background-image: url(pics/lines.jpg);}
+
+                .container {box-shadow: 4px 4px 10px rgba(13, 8, 8, 0.542);}
+
+                h1 {font-size: 300%; 
+                    letter-spacing: 2px; 
+                    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);}
+
+                img {border-radius: 15px; 
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);}
+
+                p {line-height: 1.5;}
+            }
+
+            /* 1400 and up - extra-extra-large */
+            @media (min-width: 1400px) {
+                body {background-image: url(pics/flowers.jpg);}
+
+                .container {box-shadow: 4px 4px 10px rgba(196, 196, 196, 0.399);}
+
+                h1 {font-size: 350%;}
+            }
+
+
+        </style>
+</head>
+<body onresize="showBrowserSize();" onload="showBrowserSize();">
+    
+    <div class="container"> <!--start of container-->
+
+        <div class="row"> <!--row 1 start-->
+            <div class="col-xs-12">
+                <h1> 
+                    The Raven By Edgar Allan Poe
+                </h1>
+        </div> <!--row 1 end-->
+
+        <div class="row"> <!--row 2 start-->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-6"> <!--img 1-->
+                <img src="pics/raven1.jpg" class="img-fluid" alt="Illustration By Édouard Manet depicting first two lines of The Raven">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-12 col-xl-3 col-xxl-2"> <!--stanza 1-->
+                <p>
+                    Once upon a midnight dreary, while I pondered, weak and weary,
+                    Over many a quaint and curious volume of forgotten lore—
+                    While I nodded, nearly napping, suddenly there came a tapping,
+                    As of some one gently rapping, rapping at my chamber door.
+                    "'Tis some visitor," I muttered, "tapping at my chamber door—
+                    Only this and nothing more."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-12 col-xl-6 col-xxl-2">
+                <p>
+                    Ah, distinctly I remember it was in the bleak December;
+                    And each separate dying ember wrought its ghost upon the floor.
+                    Eagerly I wished the morrow;—vainly I had sought to borrow
+                    From my books surcease of sorrow—sorrow for the lost Lenore—
+                    For the rare and radiant maiden whom the angels name Lenore—
+                    Nameless here for evermore.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-12 col-xl-6 col-xxl-2">
+                <p>
+                    And the silken, sad, uncertain rustling of each purple curtain
+                    Thrilled me—filled me with fantastic terrors never felt before;
+                    So that now, to still the beating of my heart, I stood repeating
+                    "'Tis some visitor entreating entrance at my chamber door—
+                    Some late visitor entreating entrance at my chamber door;—
+                    This it is and nothing more."
+                </p>
+            </div>
+
+        </div> <!--row 2 end-->
+
+        <div class="row"> <!--row 3 start-->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    Presently my soul grew stronger; hesitating then no longer,
+                    "Sir," said I, "or Madam, truly your forgiveness I implore;
+                    But the fact is I was napping, and so gently you came rapping,
+                    And so faintly you came tapping, tapping at my chamber door,
+                    That I scarce was sure I heard you"—here I opened wide the door;—
+                    Darkness there and nothing more.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    Deep into that darkness peering, long I stood there wondering, fearing,
+                    Doubting, dreaming dreams no mortal ever dared to dream before;
+                    But the silence was unbroken, and the stillness gave no token,
+                    And the only word there spoken was the whispered word, "Lenore?"
+                    This I whispered, and an echo murmured back the word, "Lenore!"—
+                    Merely this and nothing more.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    Back into the chamber turning, all my soul within me burning,
+                    Soon again I heard a tapping somewhat louder than before.
+                    "Surely," said I, "surely that is something at my window lattice;
+                    Let me see, then, what thereat is, and this mystery explore—
+                    Let my heart be still a moment and this mystery explore;—
+                    'Tis the wind and nothing more!"
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <img src="pics/raven2.jpg" class="img-fluid" alt="Édouard Manet depicts raven's midnight visit">
+            </div>
+
+        </div> <!--row 3 end-->
+
+        <div class="row"> <!--row 4 end-->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-3 col-xxl-3">
+                <p>
+                    Open here I flung the shutter, when, with many a flirt and flutter,
+                    In there stepped a stately Raven of the saintly days of yore;
+                    Not the least obeisance made he; not a minute stopped or stayed he;
+                    But, with mien of lord or lady, perched above my chamber door—
+                    Perched upon a bust of Pallas just above my chamber door—
+                    Perched, and sat, and nothing more.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-9 col-xxl-6">
+                <img src="pics/raven3.jpg" class="img-fluid" alt="The flying Raven by Édouard Manet">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-3">
+                <p>
+                    Then this ebony bird beguiling my sad fancy into smiling,
+                    By the grave and stern decorum of the countenance it wore,
+                    "Though thy crest be shorn and shaven, thou," I said, "art sure no craven,
+                    Ghastly grim and ancient Raven wandering from the Nightly shore—
+                    Tell me what thy lordly name is on the Night's Plutonian shore!"
+                    Quoth the Raven "Nevermore."
+                </p>
+            </div>
+
+        </div> <!--row 4 end-->
+
+        <div class="row"> <!--row 5 start-->
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <img src="pics/raven4.jpg" class="img-fluid" alt="The raven perches on a bust of Pallas Athena by Édouard Manet">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    Much I marvelled this ungainly fowl to hear discourse so plainly,
+                    Though its answer little meaning—little relevancy bore;
+                    For we cannot help agreeing that no living human being
+                    Ever yet was blessed with seeing bird above his chamber door—
+                    Bird or beast upon the sculptured bust above his chamber door,
+                    With such name as "Nevermore."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    But the Raven, sitting lonely on the placid bust, spoke only
+                    That one word, as if his soul in that one word he did outpour.
+                    Nothing farther then he uttered—not a feather then he fluttered—
+                    Till I scarcely more than muttered "Other friends have flown before—
+                    On the morrow he will leave me, as my Hopes have flown before."
+                    Then the bird said "Nevermore."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <p>
+                    Startled at the stillness broken by reply so aptly spoken,
+                    "Doubtless," said I, "what it utters is its only stock and store
+                    Caught from some unhappy master whom unmerciful Disaster
+                    Followed fast and followed faster till his songs one burden bore—
+                    Till the dirges of his Hope that melancholy burden bore
+                    Of ‘Never—nevermore'."
+                </p>
+            </div>
+
+        </div> <!--row 5 end-->
+
+        <div class="row"> <!--row 6 start-->
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12 col-xl-6 col-xxl-2"> 
+                <p>
+                    But the Raven still beguiling all my fancy into smiling,
+                    Straight I wheeled a cushioned seat in front of bird, and bust and door;
+                    Then, upon the velvet sinking, I betook myself to linking
+                    Fancy unto fancy, thinking what this ominous bird of yore—
+                    What this grim, ungainly, ghastly, gaunt, and ominous bird of yore
+                    Meant in croaking "Nevermore."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-12 col-xl-6 col-xxl-2">
+                <p>
+                    This I sat engaged in guessing, but no syllable expressing
+                    To the fowl whose fiery eyes now burned into my bosom's core;
+                    This and more I sat divining, with my head at ease reclining
+                    On the cushion's velvet lining that the lamp-light gloated o'er,
+                    But whose velvet-violet lining with the lamp-light gloating o'er,
+                    She shall press, ah, nevermore!
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4"> 
+                <img src="pics/raven5.jpg" class="img-fluid" alt="Illustration By Édouard Manet Chair in Empty Room">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-2">
+                <p>
+                    Then, methought, the air grew denser, perfumed from an unseen censer
+                    Swung by Seraphim whose foot-falls tinkled on the tufted floor.
+                    "Wretch," I cried, "thy God hath lent thee—by these angels he hath sent thee
+                    Respite—respite and nepenthe from thy memories of Lenore;
+                    Quaff, oh quaff this kind nepenthe and forget this lost Lenore!"
+                    Quoth the Raven "Nevermore."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-2">
+                <p>
+                    "Prophet!" said I, "thing of evil!—prophet still, if bird or devil!—
+                    Whether Tempter sent, or whether tempest tossed thee here ashore,
+                    Desolate yet all undaunted, on this desert land enchanted—
+                    On this home by Horror haunted—tell me truly, I implore—
+                    Is there—is there balm in Gilead?—tell me—tell me, I implore!"
+                    Quoth the Raven "Nevermore."
+                </p>
+            </div>
+
+        </div> <!--row 6 end-->
+
+        <div class="row"> <!--row 7 start-->
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-6 col-xxl-2"> <!--stanza 1-->
+                <p>
+                    Once upon a midnight dreary, while I pondered, weak and weary,
+                    Over many a quaint and curious volume of forgotten lore—
+                    While I nodded, nearly napping, suddenly there came a tapping,
+                    As of some one gently rapping, rapping at my chamber door.
+                    "'Tis some visitor," I muttered, "tapping at my chamber door—
+                    Only this and nothing more."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-6 col-xxl-2">
+                <p>
+                    Ah, distinctly I remember it was in the bleak December;
+                    And each separate dying ember wrought its ghost upon the floor.
+                    Eagerly I wished the morrow;—vainly I had sought to borrow
+                    From my books surcease of sorrow—sorrow for the lost Lenore—
+                    For the rare and radiant maiden whom the angels name Lenore—
+                    Nameless here for evermore.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+                <p>
+                    And the silken, sad, uncertain rustling of each purple curtain
+                    Thrilled me—filled me with fantastic terrors never felt before;
+                    So that now, to still the beating of my heart, I stood repeating
+                    "'Tis some visitor entreating entrance at my chamber door—
+                    Some late visitor entreating entrance at my chamber door;—
+                    This it is and nothing more."
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-6"> <!--img 1-->
+                <img src="pics/raven6.jpg" class="img-fluid" alt="Illustration By Édouard Manet Perched above the Chamber Door">
+            </div>
+
+        </div> <!--row 7 end-->
+
+
+    </div> <!--end of container-->
+
+
+
+    <div id="sizeInfo"></div>
+</body>
+</html>

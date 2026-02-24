@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations 2</title>
+
+    <style>
+        div {box-sizing: border-box;}
+
+        #yellow {position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 300px;
+            left: 300px;
+            background-color: yellow;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 50%;
+            animation-name: circle-1;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;}
+        
+        @keyframes circle-1 {
+            0% {background-color: yellow;
+                transform: rotateY(0);}
+            100% {background-color: orange;
+                transform: rotateY(360deg);}
+        }
+
+
+        #red {position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            left: 50px;
+            background-color: red;
+            text-align: center;
+            color: white;
+            animation-name: square-1;
+            animation-duration: 8s;
+            animation-delay: 500ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;}
+
+        @keyframes square-1 {
+            0% {background-color: red;
+                top: 50px;
+                left: 50px;
+                border-radius: 0%;
+                border: 5px solid black;
+                animation-timing-function: ease-in;}
+            25% {background-color: blue;
+                top: 50px;
+                left: 550px;
+                border-radius: 50%;
+                border: 10px dashed orange;}
+            50% {background-color: green;
+                top: 550px;
+                left: 550px;
+                border-radius: 0%;
+                border: 10px dotted red;}
+            75% {background-color: black;
+                top: 550px;
+                left: 50px;
+                border-radius: 50%;
+                border: 20px groove yellow;}
+            100% {background-color: red;
+                top: 50px;
+                left: 50px;
+                border-radius: 0%;
+                border: 5px solid black;}
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="yellow">
+        <h1>Rotate!</h1>
+    </div>
+
+    <div id="red">
+        <h1>Move!</h1>
+    </div>
+</body>
+</html>

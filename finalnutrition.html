@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty & Powerful | Nutrition</title>
+
+    <script src="menu.js"></script>
+
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="final_css.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <img src="final-project/bunnies.png" alt="Logo">
+            </div>
+
+            <div id="title">
+                <h1>pretty & powerful</h1>
+            </div>
+        </header> <!--end of header-->
+
+        <nav>
+            <div class="dropdown">
+                <!--hidden buttons-->
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="finalHome.html">Home</a>
+                    <a href="finalworkout.html">Workout</a>
+                    <a href="finalnutrition.html">Nutrition</a>
+                    <a href="finalselfcare.html">Self-care</a>
+                    <a href="finalblog.html">Blog</a>
+                    <a href="finalcontact.html">Contact</a>
+                </div>
+                <!--end of hidden buttons-->
+            </div> <!--end of dropdown-->
+
+            <!--menu button-->
+            <button onclick="myFunction();" class="dropbtn">
+                menu
+            </button>
+        </nav>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="hero-nutrition"> 
+                    <h1>This Week's Recipe Line Up</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="recipe-list">
+                    <a href="#r1">Yogurt Parfait</a> | <a href="#r2"> Chicken Salad</a> | <a href="#r3">Steak-Frites</a> | <a href="#r4">Banana Chia Pudding</a>
+                </div>
+            </div>
+        </div>
+
+        <a name="r1"></a>
+        <div class="row">
+            <div class="col-sm-12 col-lg-5">
+                <div class="recipe-img breakfast"></div>
+            </div>
+
+            <div class="col-sm-12 col-lg-7">
+                <div class="recipe">
+                    <h2>Breakfast: Yogurt Parfait</h2>
+                    <h4>Ingredients</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> 1 cup Greek yogurt (plain or flavored as desired)</li>
+                        <li><input type="checkbox"> 1/2 cup granola (low sugar, if preferred)</li>
+                        <li><input type="checkbox"> 1/2 cup fresh berries (e.g., strawberries, blueberries, raspberries)</li>
+                        <li><input type="checkbox"> 1 tablespoon honey or maple syrup (optional, for sweetness)</li>
+                        <li><input type="checkbox"> 1 tablespoon chia seeds or ground flaxseeds (for extra fiber and nutrients)</li>
+                        <li><input type="checkbox"> A handful of nuts (almonds, walnuts, or pecans) for added crunch (optional)</li>
+                    </ul>
+
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Start by spooning a portion of Greek yogurt into a bowl or jar.</li>
+                        <li>Sprinkle granola over the yogurt layer for crunch.</li>
+                        <li>Place a layer of fresh berries on top of the granola for natural sweetness and flavor.</li>
+                        <li>Repeat the yogurt, granola, and berry layers until you fill the jar.</li>
+                        <li>Drizzle with honey or maple syrup, sprinkle chia seeds or flaxseeds, and add a few nuts on top if desired.</li>
+                        <li>Enjoy immediately, or refrigerate for up to 24 hours for a quick grab-and-go breakfast.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <a name="r2"></a>
+        <div class="row">
+            <div class="col-sm-12 col-lg-5">
+                <div class="recipe-img lunch"></div>
+            </div>
+            
+            <div class="col-sm-12 col-lg-7">
+                <div class="recipe">
+                    <h2>Lunch: Classic Chicken Salad</h2>
+                    
+                    <h4>Ingredients</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> 2 cups cooked, shredded or diced chicken breast</li>
+                        <li><input type="checkbox"> 1/2 cup mayonnaise</li>
+                        <li><input type="checkbox"> 1/4 cup plain Greek yogurt (optional, for a lighter version)</li>
+                        <li><input type="checkbox"> 1/4 cup finely chopped celery</li>
+                        <li><input type="checkbox"> 1/4 cup finely chopped red onion</li>
+                        <li><input type="checkbox"> 1/4 cup chopped grapes or dried cranberries</li>
+                        <li><input type="checkbox"> 1 tablespoon chopped fresh parsley or dill (optional)</li>
+                        <li><input type="checkbox"> Salt and pepper to taste</li>
+                        <li><input type="checkbox"> Lettuce leaves or whole-grain bread, for serving</li>
+                    </ul>
+            
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>In a large bowl, combine the mayonnaise and Greek yogurt until smooth.</li>
+                        <li>Add the chicken, celery, red onion, and grapes or cranberries to the bowl, and mix well.</li>
+                        <li>Season the salad with salt and pepper to taste, and add fresh herbs if desired.</li>
+                        <li>Serve the chicken salad on lettuce leaves or as a filling for whole-grain bread for a tasty sandwich.</li>
+                        <li>Enjoy immediately, or refrigerate for up to 3 days for a quick lunch option.</li>
+                    </ol>
+                </div>
+            </div>
+        </div> 
+
+        <a name="r3"></a>
+        <div class="row">
+            <div class="col-sm-12 col-lg-5">
+                <div class="recipe-img dinner"></div>
+            </div>
+        
+            <div class="col-sm-12 col-lg-7">
+                <div class="recipe">
+                    <h2>Dinner: Steak Frites</h2>
+        
+                    <h4>Ingredients</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> 2 ribeye steaks (1 inch thick)</li>
+                        <li><input type="checkbox"> Salt and black pepper to taste</li>
+                        <li><input type="checkbox"> 1 tablespoon olive oil</li>
+                        <li><input type="checkbox"> 2 tablespoons unsalted butter</li>
+                        <li><input type="checkbox"> 2 cloves garlic, crushed</li>
+                        <li><input type="checkbox"> Fresh rosemary and thyme sprigs (optional)</li>
+                        <li><input type="checkbox"> 4 large russet potatoes</li>
+                        <li><input type="checkbox"> Vegetable oil, for frying</li>
+                        <li><input type="checkbox"> Sea salt, for seasoning fries</li>
+                    </ul>
+        
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Season the steaks generously with salt and black pepper on both sides.</li>
+                        <li>Heat olive oil in a large skillet over medium-high heat until shimmering. Add the steaks and cook for 3-4 minutes on each side for medium-rare, or adjust to your preferred doneness.</li>
+                        <li>During the last minute of cooking, add butter, garlic, rosemary, and thyme to the skillet. Baste the steaks with the melted butter using a spoon.</li>
+                        <li>Remove the steaks from the skillet and let them rest for a few minutes before serving.</li>
+                        <li>Peel and cut the potatoes into thin fries. Rinse them in cold water to remove excess starch, then pat them dry.</li>
+                        <li>Heat vegetable oil in a large pot to 350°F (175°C). Fry the potatoes in batches until golden and crispy. Drain on paper towels and season with sea salt.</li>
+                        <li>Serve the steaks with a side of crispy fries for a delicious dinner.</li>
+                    </ol>
+                </div>
+            </div>
+        </div> 
+
+        <a name="r4"></a>
+        <div class="row">
+            <div class="col-sm-12 col-lg-5">
+                <div class="recipe-img dessert"></div>
+            </div>
+
+            <div class="col-sm-12 col-lg-7">
+                <div class="recipe">
+                    <h2>Dessert: Banana Chia Pudding</h2>
+
+                    <h4>Ingredients</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> 1 ripe banana</li>
+                        <li><input type="checkbox"> 1/4 cup chia seeds</li>
+                        <li><input type="checkbox"> 1 cup almond milk (or milk of choice)</li>
+                        <li><input type="checkbox"> 1/2 teaspoon vanilla extract</li>
+                        <li><input type="checkbox"> 1-2 teaspoons honey or maple syrup (optional, for sweetness)</li>
+                        <li><input type="checkbox"> Fresh fruit or nuts for garnish (optional)</li>
+                    </ul>
+
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>In a bowl, mash the banana until smooth.</li>
+                        <li>Add the chia seeds, almond milk, vanilla extract, and sweetener (if using) to the bowl. Stir well to combine.</li>
+                        <li>Cover the mixture and refrigerate for at least 2 hours, or overnight, to allow the chia seeds to absorb the liquid and form a pudding-like texture.</li>
+                        <li>Stir the pudding again before serving, and add a little more almond milk if it's too thick.</li>
+                        <li>Top with fresh fruit, nuts, or other toppings of your choice.</li>
+                        <li>Enjoy your healthy and delicious banana chia pudding!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <small>pretty & powerful</small>
+        </footer>
+
+    </div> <!--end of container-->
+</body>
+</html>

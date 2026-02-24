@@ -1,0 +1,201 @@
+div#sizeInfo {position: fixed;
+    box-sizing: border-box;
+    background-color: yellow;
+    width: 100px;
+    height: 50px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+    display: block; /* change to none later */}
+
+/*small- default values less than 501px -no media query*/
+body {background-color: black;
+margin: 0px;}
+
+div#main {position: static;
+box-sizing: border-box;
+width: 100%;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+background-color: white;}
+
+header {position: static;
+box-sizing: border-box;
+width: 100%;
+height: 50px;
+background-image: url(pics/header_graphic.jpg);
+background-size: cover;}
+
+article {position: static;
+box-sizing: border-box;
+width: 100%;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 20px;}
+
+h2 {margin: 0px;}
+
+p {font-size: 16px;
+line-height: 22px;
+font-family: arial;}
+
+img.responsive {width: 50%;
+height: auto;
+float: right;
+padding-left: 20px;}
+
+footer {position: static;
+box-sizing: border-box;
+background-color: transparent;
+width: 100%;
+height: 100px;
+padding-top: 10px;
+text-align: center;
+border-top: 1px dashed gray;}
+
+small {font-size: 14px;
+font-family: arial;
+color: #333333;}
+
+nav {position: fixed;
+box-sizing: border-box;
+bottom: 0px;
+left: 0px;
+z-index: 100;
+width: 100%;
+height: 50px;
+padding-top: 0px;
+background-color: lightblue;
+text-align: center;}
+
+/*style menu button for nav*/
+.dropbtn {background-color: #166aaf;
+color: white;
+padding: 16px;
+font-size: 16px;
+font-family: arial;
+border: none;
+cursor: pointer;
+width: 160px;
+text-align: center;}
+
+.dropbtn:hover {
+    background-color: deepskyblue;
+    color: navy;
+}
+
+.dropbtn:focus {background-color: deepskyblue;
+color: yellow;}
+
+/*position dropdown menu*/
+.dropdown {position: relative;
+display: inline-block;}
+
+/*style the dropdown menu*/
+.dropdown-content {
+    display: none; /*change to none when done styling*/
+    position: absolute;
+    background-color: lightblue;
+    color: white;
+    min-width: 160px;
+    z-index: 1;
+    bottom: 30px; /*NOTE- should be 50px*/
+    left: 0px;
+    box-shadow: 5px -5px 15px rgba(0, 0, 0, .40);
+}
+
+/*style dropdown links*/
+.dropdown-content a {
+    display: block;
+    color: white;
+    font-family: arial;
+    font-style: 16px;
+    padding: 16px;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+
+/*style dropdown links when hovered over*/
+.dropdown a:hover {
+    background-color: deepskyblue;
+    color: navy;
+}
+
+/*define show class for javascript to make dropdown appear*/
+.show {display: block;}
+
+aside {position: static;
+box-sizing: border-box;
+background-color: orange;
+height: 100px;
+width: 100px;
+display: none;}
+
+/***********************medium - 501 to 660px*************************/
+@media (min-width: 501px) {
+    header {height: 100px;}
+}
+
+/***********************large - 661 to 999px*************************/
+@media (min-width: 661px) {
+    div#main {width: 96%;}
+
+    header {position: static;
+        box-sizing: border-box;
+        width: 100%;
+        height: 70px;
+        background-image: url(pics/header_graphic.jpg);
+        background-size: cover;}
+
+    header {height: 150px;}
+
+    img.responsive {width: auto;
+    height: auto;}
+
+    nav {display: block;
+    position: static;}
+
+    .dropbtn {display: none;}
+
+    #myDropdown {
+        display: block;
+        position: static;
+        padding: 0px;
+    }
+
+    .dropdown-content a {display: inline-block;
+    font-size: 24px;
+    padding: 10px 15px 10px 15px;
+    border-bottom: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin-right: -4px;}
+}
+
+/***********************x-large - 1000px and up*************************/
+@media (min-width: 1000px) {
+    body {background-image: url(pics/pinguBackground.jpg);
+    background-size: cover;
+    background-repeat: repeat;}
+
+    div#main {width: 950px;}
+
+    article {width: 750px;
+        float: left;
+        min-height: 400px;}
+
+    aside {display: block;
+        background-color: transparent;
+        width: 200px;
+        height: auto;
+        float: right;}
+
+    footer {clear: both;}
+
+    img.responsive {float: left;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;}
+}

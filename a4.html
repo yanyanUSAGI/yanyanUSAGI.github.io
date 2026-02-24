@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 4</title>
+
+        <style>
+
+            body {background-color: lavenderblush;
+                margin: 0px;}
+
+            div#container {position: relative;
+                box-sizing: border-box;
+                width: 1536px;
+                height: 738px;
+                background-color: pink;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 70px;
+                background-image: url(pics/pmmmbg.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 20px;
+                border: 5px solid black;}
+            
+            div#charlotte {position: absolute;
+                box-sizing: border-box;
+                width: 446px;
+                height: 425px;
+                background-color: transparent;
+                top: 30px;
+                right: 0px;
+                z-index: 60;
+                background-image: url(pics/charlotte.png);
+                background-size: cover;
+                background-repeat: no-repeat;}
+
+            div#madoka {position: absolute;
+                box-sizing: border-box;
+                width: 132px;
+                height: 222px;
+                background-color: transparent;
+                top: 120px;
+                right: 730px;
+                z-index: 30;
+                background-image: url(pics/madoka.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;}
+
+            div#homura {position: absolute;
+                box-sizing: border-box;
+                width: 132px;
+                height: 222px;
+                background-color: transparent;
+                top: 120px;
+                right: 670px;
+                z-index: 40;
+                background-image: url(pics/homura.png);
+                background-size: cover;
+                background-repeat: no-repeat;}
+
+            div#mami {position: absolute;
+                box-sizing: border-box;
+                width: 139px;
+                height: 222px;
+                background-color: transparent;
+                top: 350px;
+                right: 290px;
+                z-index: 50;
+                background-image: url(pics/mami.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                transform: rotate(10deg);}
+            
+            div#spatter {position: absolute;
+                box-sizing: border-box;
+                width: 400px;
+                height: 450px;
+                background-color: transparent;
+                top: 270px;
+                right: 160px;
+                z-index: 45;
+                background-image: url(pics/blood.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;}
+
+            div#sayaka {position: absolute;
+                box-sizing: border-box;
+                width: 131px;
+                height: 223px;
+                background-color: transparent;
+                top: 55px;
+                left: 370px;
+                z-index: 20;
+                background-image: url(pics/sayaka.png);
+                background-size: cover;
+                background-repeat: no-repeat;}
+
+            div#kyoko {position: absolute;
+                box-sizing: border-box;
+                width: 223px;
+                height: 222px;
+                background-color: transparent;
+                top: 90px;
+                left: 25px;
+                z-index: 10;
+                background-image: url(pics/kyoko.png);
+                background-size: cover;
+                background-repeat: no-repeat;}
+            
+            div#lacebottom {position: fixed;
+                background-color: transparent;
+                height: 90px;
+                width: 100%;
+                bottom: -15px;
+                right: 0px;
+                z-index: 1000;
+                color: white;
+                background-image: url(pics/laceborder.png);
+                background-size: contain;}
+            
+            div#lacetop {position: fixed;
+                background-color: transparent;
+                height: 100px;
+                width: 100%;
+                top: -15px;
+                right: 0px;
+                z-index: 2000;
+                color: white;
+                background-image: url(pics/lacebordertop.png);
+                background-size: contain;}
+            
+            div#scenetitle {position: absolute;
+                box-sizing: border-box;
+                top: 330px;
+                left: 48px;
+                z-index: 15;}
+            
+            @font-face {
+                font-family: font1;
+                src: url(fonts/oktavia.ttf);
+            }
+
+            h1 {font-family: font1;
+                font-size: 65px;
+                color: black;
+                text-shadow: 5px 5px 0px white;}
+
+            div#textbox {position: absolute;
+                box-sizing: border-box;
+                width: 900px;
+                height: 200px;
+                background-color: rgba(0, 0, 0, 0.5);
+                bottom: 50px;
+                left: 50px;
+                padding: 0px 25px 10px 25px;
+                overflow: auto;}
+            
+            p {font-family: font1;
+                color: white;
+                font-size: 23px;
+                letter-spacing: 3px;
+                word-spacing: 4px;}
+
+        </style>
+    </head>
+    <body>
+        
+
+        <div id="lacetop"></div>
+        <div id="lacebottom"></div>
+
+        <div id="container">
+
+            <audio controls>
+                
+                <source src="audio/walpurgis.mp3" type="audio/mpeg">
+                
+                <source src="audio/walpurgis.ogg" type="audio/ogg">
+
+            </audio>
+            
+            <div id="homura"></div>
+
+            <div id="madoka"></div>
+
+            <div id="mami"></div>
+
+            <div id="spatter"></div>
+
+            <div id="sayaka"></div>
+
+            <div id="charlotte"></div>
+
+            <div id="kyoko"></div>
+
+            <div id="scenetitle">
+                <h1> Magica Quartet Vs. Charlotte </h1>
+            </div>
+
+            <div id="textbox">
+
+                <p>
+                Madoka Magica is an awesome anime that takes dark, psychological twist on the magical girl genre. It follows the main character, Madoka Kaname, who is offered a chance by a mysterious creature named Kyubey to become a magical girl in exchange for one wish. 
+                </p>
+                
+                <p>
+                As she considers this life-changing decision, she and her friend Sayaka Miki meet other magical girls who battle witches, creatures responsible for causing despair and chaos.
+                </p> 
+                
+                <p>
+                One of these magical girls is Mami Tomoe, a kind but experienced fighter who mentors them. However, the series reveals the dark, often tragic consequences of being a magical girl, including the emotional and physical toll it takes.
+                </p>
+
+                <p>
+                The recreated scene depicts, Mami who is killed by a powerful witch named Charlotte during a battle. The witch decapitates Mami, shattering the girls' initial perception of magical girl life as glamorous. This scene marks a turning point in the series, signaling the show's shift into darker themes, highlighting the peril and inevitability of death in their world. 
+                </p>
+
+                <p>
+                Mami's death also becomes a powerful symbol of the emotional and mental consequences of battling witches, showing how even the strongest magical girls aren't safe.
+                </p>
+
+            </div>
+
+        </div> <!--end of container-->
+
+    </body>
+</html>

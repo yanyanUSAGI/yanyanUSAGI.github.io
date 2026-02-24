@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+
+    <style>
+        body {background-color: pink;}
+
+        div {box-sizing: border-box;}
+
+        #usagi {position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            background-color: lavenderblush;
+            border: 7px solid #be0546;
+            width: 1100px;
+            height: 800px;
+            background-image: url(pics/usagihearteyes.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;}
+
+        #heart1, #heart2 {
+            position: relative;
+            width: 190px;
+            height: 170px;
+            }
+            
+        #heart1:before,
+        #heart1:after,
+        #heart2:before,
+        #heart2:after {
+            position: absolute;
+            content: "";
+            left: 90px;
+            top: 0;
+            width: 90px;
+            height: 140px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            }
+            
+        #heart1:after, #heart2:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            }
+        
+        #heart1 {left: 385px;
+            top: 250px;
+            transform: rotate(-20deg);
+            animation-name: animate-heart;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;}
+
+        #heart2 {right: -534px;
+            top: 59px;
+            transform: rotate(-2deg);
+            animation-name: animate-heart;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;}
+        
+        @keyframes animate-heart {
+            0% {opacity: 0.0;}
+            25% {opacity: 0.75;}
+            50% {opacity: 1.0;}
+            75% {opacity: 0.75;}
+            100% {opacity: 0.0;}
+        }
+
+        .sparkle {position: absolute;
+            background: #ffdc01;
+            mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+            animation-name: animate-sparkle;
+            animation-duration: 5s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animate-sparkle {
+            0% {transform: rotate(-10deg), rotateY(0deg);}
+            50% {transform: rotate(-10deg), rotateY(180deg);}
+            100% {transform: rotate(-10deg) rotateY(360deg);}
+        }
+
+        .sparkle1 {height: 150px;
+            width: 125px;
+            left: 224px;
+            top: 385px;
+            transform: rotate(-10deg);}
+
+        .sparkle2 {height: 100px;
+            width: 75px;
+            left: 280px;
+            top: 340px;
+            transform: rotate(-10deg);}
+
+        .sparkle3 {height: 90px;
+            width: 65px;
+            left: 220px;
+            top: 340px;
+            transform: rotate(-10deg);}
+
+        #text {position: absolute;
+            text-align: center;
+            height: 350px;
+            width: 450px;
+            color: #1c36e9;
+            font-size: 40px;
+            bottom: 90px;
+            right: 25px;
+            text-shadow: 5px 1px 1px rgba(255, 253, 253, 0.62);
+            transform: rotate(10deg);
+            animation-name: animate-text;
+            animation-delay: 7s;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            opacity: 0.0;}
+        
+        @keyframes animate-text {
+            0% {bottom: 0px; font-size: 40px;}
+            25% {bottom: 100px; opacity: 1.0;}
+            50% {bottom: 130px; opacity: 1.0; font-size: 40px;}
+            75% {bottom: 160px; opacity: 1.0; font-size: 50px;}
+            100% {bottom: 0px; opacity: 0.0;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="usagi">
+
+        <div id="heart1">
+            <div id="heart1:before"></div>
+            <div id="heart1:after"></div>
+        </div>
+        <div id="heart2">
+            <div id="heart2:before"></div>
+            <div id="heart2:after"></div>
+        </div>
+
+        <div class="sparkle sparkle1"></div>
+
+        <div class="sparkle sparkle2"></div>
+
+        <div class="sparkle sparkle3"></div>
+
+        <div id="text">
+            <h1>うまい!!</h1>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Responsive Design
+    </title>
+
+    <script>
+        function showBrowserSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.getElementById("sizeInfo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+    </script>
+
+    <style>
+
+        div#sizeInfo {position: fixed;
+            box-sizing: border-box;
+            background-color: yellow;
+            width: 100px;
+            height: 50px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 999;
+            display: none; /* change to none later */}
+
+        /*high resolution for screens 1000px and wider aka the default value*/
+        body {background-color: navy;
+            background-image: url(pics/depaul_logo.png);}
+
+        div#main {position: static;
+            box-sizing: border-box;
+            background-color: #fff2e0;
+            width: 960px;
+            min-height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            border-left: 1px solid black;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-top: 1px solid black;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;}
+
+        header {text-align: center;}
+
+        footer {position: static;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100px;
+            background-color: tan;
+            padding-top: 10px;
+            text-align: center;}
+
+        h1 {font-size: 48px;
+            font-family: times new roman;
+            margin-bottom: 15px;
+            margin-top: 0px;}
+
+        h2 {font-size: 36px;
+            font-family: times new roman;
+            margin-top: 5px;
+            margin-bottom: 5px;}
+        
+        .large {display: block;}
+
+        .medium, 
+        .small, 
+        .tiny {display: none;}
+
+        img.responsive {max-width: 500px;
+            float: right;
+            margin-left: 20px;
+            margin-right: 20px;}
+
+        p {font-family: arial;
+            color: black;
+            font-size: 16px;
+            line-height: 22px;
+            padding-left: 20px;
+            padding-right: 20px;}
+
+        /*medium resolution for screens btwn 661px and 999px*/
+        @media screen and (max-width:999px) and (min-width:661px) {
+            body {background-color: darkgreen;
+            background-image: url(none);}
+
+            .medium {display: block;}
+
+            .large, .small, .tiny {display: none;}
+
+            div#main {width: 80%;}
+
+            img.responsive {width: 50%;
+                height: auto;
+                }
+            
+            p {font-size: 18px;
+                line-height: 24px;}
+
+            h1 {font-size: 40px;}
+        }
+
+        /*small resolution for screens btwn 501px and 660px*/
+        @media screen and (max-width:660px) and (min-width:501px) { 
+            body {background-color: orange;
+                background-image: url(none);}
+
+            .small {display: block;}
+
+            .large, .medium, .tiny {display: none;}
+
+            div#main {width: 96%;
+                border: 0px solid transparent;
+                border-radius: 0px;}
+
+            img.responsive {width: 90%;
+                float: none;}
+            
+            p {font-size: 20px;
+                line-height: 26px;}
+            
+            footer {background-color: transparent;
+                border-top: 2px dashed brown;
+                }
+        }
+
+        /*tiny resolution for screens 500px and lower*/
+        @media screen and (max-width:500px) {
+            body {background-color: yellow;
+                background-image: url(none);
+                margin: 0px;}
+
+            .tiny {display: block;}
+
+            .large, .medium, .small {display: none;}
+
+            div#main {width: 100%;
+                background-color: white;
+                margin-left: 0px;
+                margin-right: 0px;
+                border: 0px solid transparent;
+                border-radius: 0px;}
+            
+            img.responsive {width: 100%;
+                float: none;
+                margin-left: 0px;
+                margin-right: 0px;}
+            
+            p {font-size: 20px;
+                line-height: 26px;}
+
+            footer {background-color: transparent;
+                border-top: 3px dotted gray;}
+        }
+    </style>
+
+</head>
+<body>
+
+    <body onresize="showBrowserSize();" onload="showBrowserSize();">
+
+    <div id="main">
+        <header>
+            <h1 class = "large"> This website is Large</h1>
+            <h1 class = "medium"> This website is Medium</h1>
+            <h1 class = "small"> This website is Small</h1>
+            <h1 class = "tiny"> This website is Tiny</h1>
+        </header>
+
+            <img src="resized-imgs/cat.jpg" alt="cat" class="responsive">
+
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nisl arcu, ut gravida nisi dapibus non. Aliquam erat ipsum, malesuada quis porttitor quis, pulvinar lacinia lacus. Mauris finibus in nisl nec sollicitudin. Mauris nec elit a ligula accumsan convallis ac rutrum ipsum. Nam sed nibh in magna varius sollicitudin ac id lorem. Fusce viverra, orci vitae vehicula sagittis, dolor ligula semper enim, sed vestibulum dui lorem sit amet lectus. Aliquam vehicula, nunc ut luctus imperdiet, odio tellus tristique odio, non fringilla ex magna non lacus. In hac habitasse platea dictumst. In mattis elit id rhoncus consequat. Proin malesuada porta elit ultricies suscipit. Cras bibendum venenatis erat, vitae euismod dolor feugiat id.
+            </p>
+            <p>
+            Pellentesque vulputate ultricies tellus nec auctor. In hac habitasse platea dictumst. Duis pretium finibus mauris. Nullam lobortis lacus non imperdiet pulvinar. In maximus imperdiet elit eu fringilla. Mauris eget nisi mauris. Quisque cursus hendrerit nisi, et elementum est. Curabitur sit amet tellus mollis, imperdiet mauris quis, aliquet arcu. Nam magna metus, iaculis sed faucibus at, iaculis scelerisque tortor. Donec vel pellentesque felis. Sed tempor arcu metus, ac rhoncus purus accumsan a.
+            </p>
+            <p>
+            Morbi porta massa et ex congue, non fermentum urna iaculis. Ut tincidunt lacus nibh, et varius risus accumsan tincidunt. Ut lacinia est hendrerit justo finibus ullamcorper. Vestibulum dapibus ipsum sed eleifend tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ut fringilla nulla. Curabitur quis tellus eget lectus placerat hendrerit. Ut auctor magna sed dui maximus imperdiet.
+            </p>
+            <p>
+            Proin tempor tincidunt felis egestas ultricies. Fusce accumsan sapien non ultrices imperdiet. Donec gravida dignissim facilisis. Phasellus elementum vitae odio nec tempor. Aliquam a neque nulla. Donec quis enim sit amet magna faucibus faucibus vel ac orci. Sed ut lobortis augue. Sed blandit purus quis elit placerat, sit amet volutpat metus vulputate. In id orci sit amet nisl semper placerat efficitur ut ipsum. Cras quis viverra metus. Aliquam erat volutpat. Mauris gravida porta justo vitae eleifend. Quisque id lectus suscipit, hendrerit lectus et, lobortis risus. Mauris et rutrum tortor. In elementum tincidunt nisl, ut fermentum ex facilisis sed. Nullam scelerisque velit elit, aliquam efficitur ligula euismod in.
+            </p>
+            <p>
+            Ut non metus et enim pretium posuere. Vestibulum nec tellus vitae dolor sodales pulvinar. In pulvinar diam vitae mi ultrices, in efficitur sapien pulvinar. Pellentesque in elit ante. Morbi pharetra dolor at libero blandit suscipit. Sed scelerisque feugiat velit, vitae dapibus mi blandit at. Vivamus tempor, tellus quis interdum vehicula, sapien erat egestas turpis, sed condimentum sapien massa non orci. Sed ultrices aliquam pretium. Curabitur et dictum sapien. Sed viverra velit sed convallis iaculis. Donec rhoncus, libero vel luctus sollicitudin, mauris nisi sagittis tellus, accumsan tempor nulla ex in ipsum. Vestibulum viverra ac felis ut elementum. Aenean quis neque tellus.
+            </p>
+            
+
+        <footer>
+            <h2 class = "large"> This website is Large</h2>
+            <h2 class = "medium"> This website is Medium</h2>
+            <h2 class = "small"> This website is Small</h2>
+            <h2 class = "tiny"> This website is Tiny</h2>
+        </footer>
+    </div>
+
+    <div id="sizeInfo"></div>
+</body>
+</html>

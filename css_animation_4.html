@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations 4</title>
+
+    <style>
+
+        body {background-color: black;}
+
+        div {box-sizing: border-box;}
+
+        /*sky*/
+        #sky {position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: deepskyblue;
+            border: 2px solid gray;
+            width: 1000px;
+            height: 580px;
+            animation-name: animate-sky;
+            animation-duration: 5s;
+            animation-timing-function: linear;}
+
+        @keyframes animate-sky {
+            from {background-color: navy;}
+            to {background-color: deepskyblue;}
+        }
+
+        /*sun*/
+        #sun-container {position: relative;
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: transparent;
+            animation-name: animate-sun;
+            animation-duration: 5s;
+            animation-timing-function: ease;}
+
+        #circle {position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 30;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            /*h-offset, v-offset, blur spread color*/
+            box-shadow: 0px 0px 30px 10px darkorange;}
+
+        #triangle-up {position: absolute;
+            top: 20px;
+            left: 25px;
+            z-index: 20px;
+            width: 0px;
+            height: 0px;
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-bottom: 125px solid orange;}
+        
+        #triangle-down {position: absolute;
+            bottom: 20px;
+            left: 25px;
+            z-index: 10;
+            width: 0px;
+            height: 0px;
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-top: 125px solid orange;}
+
+        @keyframes animate-sun {
+            from {top: 400px;
+                left: 0px;}
+            to {top: 0px;
+                left: 0px;
+                transform: rotate(180deg);}
+        }
+
+        /*ground*/
+        #ground {position: absolute;
+            bottom: 0px;
+            left: 0px;
+            z-index: 500;
+            width: 100%;
+            height: 200px;
+            background-color: green;
+            animation-name: animate-ground;
+            animation-duration: 5s;}
+
+        @keyframes animate-ground {
+            from {background-color: black;}
+            to {background-color: green;}
+        }
+
+        /*stars*/
+        #star-container {position:absolute;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            opacity: 0.0;
+            animation-name: animate-star;
+            animation-duration: 3s;
+            animation-timing-function: linear;}
+
+        #star-top {position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            width: 0px;
+            height: 0px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 40px solid yellow;}
+
+        #star-bottom {position: absolute;
+            bottom: 0px;
+            left: 0px;
+            z-index: 15;
+            width: 0px;
+            height: 0px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 40px solid yellow;}
+
+        .star1 {top: 100px;
+            left: 100px;
+            z-index: 5;
+            transform: rotate(3deg);}
+
+        .star2{top: 200px;
+            right: 75px;
+            z-index: 5;
+            transform: rotate(-2deg);}
+
+        @keyframes animate-star {
+            from {opacity: 1.0;}
+            to {opacity: 0.0;}
+        }
+
+        /*words*/
+        @font-face {
+            font-family: flower;
+            src: url(fonts/flower.ttf);
+        }
+
+        #words1, #words2, #words3 {position: absolute;
+            text-align: center;
+            height: 75px;
+            width: 1000px;
+            font-size: 40px;
+            font-family: flower;
+            color: green;
+            font-weight: bold;
+            border: 0px solid black;
+            bottom: 100px;
+            left: 0px;
+            z-index: 999;
+            animation-name: animate-words;}
+
+        #words1 {animation-delay: 5s;
+            animation-duration: 5s;
+            opacity: 0.0;}
+
+        #words2 {animation-delay: 9s;
+            animation-duration: 5s;
+            opacity: 0.0;}
+
+        #words3 {animation-delay: 13s;
+            animation-duration: 10s;
+            opacity: 0.0;}
+
+        @keyframes animate-words {
+            0% {bottom: 90px;}
+            25% {bottom: 180px; opacity: 1.0;}
+            50% {bottom: 180px; opacity: 1.0; letter-spacing: 3px;}
+            75% {bottom: 180px; opacity: 1.0; letter-spacing: 6px;}
+            100% {bottom: 220px; opacity: 1.0; letter-spacing: 6px;}
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="sky">
+
+        <div id="sun-container">
+            <div id="circle"></div>
+            <div id="triangle-up"></div>
+            <div id="triangle-down"></div>
+        </div>
+
+        <div id="star-container" class="star1">
+            <div id="star-top"></div>
+            <div id="star-bottom"></div>
+        </div>
+
+        <div id="star-container" class="star2">
+            <div id="star-top"></div>
+            <div id="star-bottom"></div>
+        </div>
+
+        <div id="words1">
+            Who loves the sun?
+        </div>
+
+        <div id="words2">
+            Who cares that it makes plants grow?
+        </div>
+
+        <div id="words3">
+            Who cares what it does since you broke my heart?
+        </div>
+
+        <div id="ground">
+
+        </div>
+
+    </div> <!--end of sky-->
+</body>
+</html>

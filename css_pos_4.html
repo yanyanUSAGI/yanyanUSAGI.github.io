@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>
+            Relative Absolute & Fixed CSS
+        </title>
+
+        <style>
+
+            body {background-color: lavenderblush;
+                margin: 0px;}
+
+            div {box-sizing: border-box;}
+            
+            /*relative box to hold absolute boxes*/
+            div#container {position: relative;
+                background-color: lavender;
+                width: 800px;
+                height: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                top: 20px; /*pushes the box down from the top*/
+                z-index: 100;}
+
+            div#one {position: absolute;
+                background-color: #b0dced;
+                width: 200px;
+                height: 300px;
+                top: 0px; /*anchors it to the top left of the container*/
+                left: 0px;
+                z-index: 10;/*changes the stacking order*/}
+
+            div#two {position: absolute;
+                background-color: #f76464;
+                width: 200px;
+                height: 300px;
+                top: 100px;
+                left: 50px;
+                transform: rotate(5deg);
+                z-index: 20;}
+
+            div#three {position: absolute;
+                background-color: #82e582;
+                width: 200px;   
+                height: 300px;
+                top: 200px;
+                left: 100px;
+                transform: rotate(10deg);
+                z-index: 30;}
+
+            div#four {position: absolute;
+                background-color: yellow;
+                background-image: linear-gradient(yellow,purple);
+                width: 200px;
+                height: 6000px;
+                top: 0px;
+                right: 0px;
+                z-index: 40;}
+
+            div#five {position: fixed;
+                background-color: cyan;
+                width: 200px;
+                height: 200px;
+                top: 0px;
+                left: 0px;
+                z-index: 15;}
+
+        </style>
+    </head>
+    <body>
+
+        <div id="four"> Absolute Yellow-Purple Box </div>
+
+        <div id="five"> Fixed Cyan Div </div>
+
+        <div id="container">
+
+            <div id="one"> Absolute Blue Box </div>
+            <div id="two"> Absolute Red Box </div>
+            <div id="three"> Absolute Green Box </div>
+
+        </div> <!--end of container-->
+    </body>
+</html>

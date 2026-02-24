@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations 3</title>
+    
+    <style>
+        /*css applied to all div boxes*/
+        div {box-sizing: border-box;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            animation-timing-function: linear;
+            border: 2px dashed black;
+            background-color: lightgrey;}
+
+        div#yellow {background-color: yellow;
+            animation-name: yellow-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;
+            }
+
+        @keyframes yellow-box {
+            0% {transform: rotateX(0deg);}
+            100% {transform: rotateX(360deg);}
+        }
+
+        div#red {background-color: red;
+            animation-name: red-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes red-box {
+            0% {transform: rotateY(0deg);}
+            100% {transform: rotateY(360deg);}
+        }
+
+        div#aqua {background-color: aqua;
+            animation-name: aqua-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+        
+        @keyframes aqua-box {
+            0% {transform: rotatez(0deg);}
+            100% {transform: rotatez(360deg);}
+        }
+
+        div#orange {background-color: orange;
+            animation-name: orange-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes orange-box {
+            0% {transform: rotate3D(0,0,0, 0deg);}
+            100% {transform: rotate3D(1,1,1, 360deg)}
+        }
+
+        #lightgreen {background-color: lightgreen;
+            animation-name: lightgreen-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes lightgreen-box {
+            0% {transform: scaleX(1);}
+            50% {transform: scaleX(2);}
+            100% {transform: scaleX(1);}
+        }
+
+        #lightblue {background-color: lightblue;
+            animation-name: lightblue-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes lightblue-box {
+            0% {transform: scaleY(1);}
+            50% {transform: scaleY(2);}
+            100% {transform: scaleY(1);}
+        }
+
+        #pink {background-color: pink;
+            animation-name: pink-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+        
+        @keyframes pink-box {
+            0% {transform: skewX(0deg);}
+            100% {transform: skewX(180deg);}
+        }
+
+        #beige {background-color: beige;
+            animation-name: beige-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes beige-box {
+            0% {transform: skewY(0deg);}
+            100% {transform: skewY(180deg);}
+        }
+
+        #lavender {background-color: lavender;
+            animation-name: lavender-box;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-iteration-count: 2;}
+
+        @keyframes lavender-box {
+            0% {transform: skew(0deg,0deg);}
+            100% {transform: skew(180deg,180deg);}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="yellow">
+        <h1>rotateX</h1>
+    </div>
+
+    <div id="red">
+        <h1>rotateY</h1>
+    </div>
+
+    <div id="aqua">
+        <h1>rotateZ</h1>
+    </div>
+
+    <div id="orange">
+        <h1>rotate3D</h1>
+    </div>
+
+    <br><br>
+
+    <div id="lightgreen">
+        <h1>scaleX</h1>
+    </div>
+
+    <div id="lightblue">
+        <h1>scaleY</h1>
+    </div>
+
+    <div id="pink">
+        <h1>skewX</h1>
+    </div>
+
+    <div id="beige">
+        <h1>skewY</h1>
+    </div>
+
+    <br><br>
+
+    <div id="lavender">
+        <h1>skew (X & Y)</h1>
+    </div>
+
+</body>
+</html>

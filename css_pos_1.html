@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            CSS Box Sizing & Background Image Demo
+        </title>
+
+        <style>
+
+            body {background-color: lavender;
+                background-image: url(resized-imgs/cat.jpg);/*add ur cat image mine is in a folder so it might not work for you*/
+                background-repeat: no-repeat;
+                background-position: top right;
+                background-size: cover;}
+
+            div#one {position: static; /*default    value*/ 
+                box-sizing: content-box; /*default value*/
+                background-color: red;
+                color: white;
+                width: 300px;
+                height: 300px;
+                padding-left: 50px;
+                padding-right: 50px;
+                font-size: 24px;}
+
+            div#two {position: static; /*default value*/
+                box-sizing: border-box; /*use this value*/
+                background-color: pink;
+                color: white;
+                width: 300px;
+                height: 300px;
+                padding-left: 50px;
+                padding-right: 50px;
+                font-size: 24px;}
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="one">
+            Box 1 <br>
+            content-box <br>
+            total width is 400px <br>
+            the 50 px of padding on each side adds to the total width of the box
+        </div>
+
+        <div id="two">
+            Box two <br>
+            border-box <br>
+            the 50px of padding "cuts into" the total width of the box
+        </div>
+
+    </body>
+</html>

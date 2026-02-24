@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Containers</title>
+
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        function showBrowserSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            document.getElementById("sizeInfo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+    </script>
+
+    <style>
+
+        div#sizeInfo {position: fixed;
+            box-sizing: border-box;
+            background-color: yellow;
+            width: 100px;
+            height: 50px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 999;
+            display: block; /* change to none later */}
+
+        /*bootstrap auto sets all div box-sizing to border-box*/
+        
+        /*css for under 576px wide-default values*/
+        div {background-color: lightblue;
+            padding-bottom: 20px;
+            margin-bottom: 10px;}
+
+        /*btwn 576-767*/
+        @media (min-width: 576px) {
+            div {background-color: yellow;
+                color: purple;
+                font-family: comic sans ms;
+                }
+        }
+
+        /*btwn 578-991*/
+        @media (min-width: 768px) {
+            div {background-color: cyan;
+                color: initial;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+        }
+
+        /*btwn 992-1199*/
+        @media (min-width: 992px) {
+            div {background-color: paleturquoise;
+                }
+        }
+
+        /*btwn 1200-1399*/
+        @media (min-width: 1200px) {
+            div {background-color: mediumturquoise;}
+        }
+
+        /*btwn 1400 and up*/
+        @media (min-width: 1400px) {
+            div {background-color: teal;
+                color: white;}
+        }
+
+    </style>
+
+</head>
+
+<body onresize="showBrowserSize();" onload="showBrowserSize();">
+    
+    <h1>Bootstrap Container Demo</h1>
+
+    <div class="container">
+        <h2> .container // Default Container </h2>
+        <h3>Will "snap" to breakpoints</h3>
+
+        <p>
+            100% if browser is less than 576px wide <br> 540 px if browser is btwn 576px-767px wide <br>
+            720px is browser is btwn 768px-991px wide <br>
+            960px is browser is btwn 992px-1199px wide <br>
+            1140px is browser is btwn 1200px-1399px wide <br>
+            1320px is browser is btwn 1400px and up 
+        </p>
+    </div>
+
+    <div class="container-sm">
+        <h2> .container-sm // Small Container </h2>
+        <h3>Is 100% until browser is 576px and up</h3>
+
+        <p>
+            100% is browser is less than 576px wide <br>
+            540 px if browser is btwn 576px-767px wide <br>
+            720px is browser is btwn 768px-991px wide <br>
+            960px is browser is btwn 992px-1199px wide <br>
+            1140px is browser is btwn 1200px-1399px wide <br>
+            1320px is browser is btwn 1400px and up
+        </p>
+    </div>
+    
+    <div class="container-md">
+        <h2> .container-md // Medium Container</h2>
+        <h3>Is 100% until browser width is 768px and up</h3>
+
+        <p>
+            100% is browser is less than 768px wide <br>
+            720px is browser is btwn 768px-991px wide <br>
+            960px is browser is btwn 992px-1199px wide <br>
+            1140px is browser is btwn 1200px-1399px wide <br>
+            1320px is browser is btwn 1400px and up
+        </p>
+    </div>
+
+    <div class="container-lg">
+        <h2> .container-lg // Large Container </h2>
+        <h3> Is 100% until browser width is 992px and up</h3>
+
+        <p>
+            100% if browser is less than 992px and wide <br>
+            960px is browser is btwn 992px-1199px wide <br>
+            1140px is browser is btwn 1200px-1399px wide <br>
+            1320px is browser is btwn 1400px and up
+        </p>
+    </div>
+
+    <div class="container-xl">
+        <h2> .container-xl // X-Large Container </h2>
+        <h3> Is 100% until browser width is 1200px and up</h3>
+
+        <p>
+            100% if browser is less than 1200px wide <br>
+            1140px is browser is btwn 1200px-1399px wide <br>
+            1320px is browser is btwn 1400px and up
+        </p>
+    </div>
+
+    <div class="container-xxl">
+        <h2> .container-xxl // XX-Large Container </h2>
+        <h3> Is 100% until browser width is 1400px and up</h3>
+
+        <p>
+            100% if browser is less than 1400px <br>
+            1320px is browser is btwn 1400px and up
+        </p>
+    </div>
+
+    <div id="container-fluid">
+        <h2> Fluid Container </h2>
+        <h3> Resizes to always be 100% of the browser width</h3>
+    </div>
+
+    <br><br>
+
+    <div id="sizeInfo"></div>
+</body>
+</html>

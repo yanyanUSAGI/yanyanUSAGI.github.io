@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty & Powerful | Self Care</title>
+
+    <script src="menu.js"></script>
+
+
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="final_css.css">
+</head>
+<body onresize="showBrowserSize();" onload="showBrowserSize();">
+    <div class="container">
+        <header>
+            <div id="logo">
+                <img src="final-project/bunnies.png" alt="Logo">
+            </div>
+
+            <div id="title">
+                <h1>pretty & powerful</h1>
+            </div>
+        </header>
+
+        <nav>
+            <div class="dropdown">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="finalHome.html">Home</a>
+                    <a href="finalworkout.html">Workout</a>
+                    <a href="finalnutrition.html">Nutrition</a>
+                    <a href="finalselfcare.html">Self-care</a>
+                    <a href="finalblog.html">Blog</a>
+                    <a href="finalcontact.html">Contact</a>
+                </div>
+            </div>
+            <button onclick="myFunction();" class="dropbtn">menu</button>
+        </nav>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="hero-selfcare"> 
+                    <h1>Nuture Your Mind, Body and Soul</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="selfcare-list">
+                    <a href="#sc1">Affirmations</a> | <a href="#sc2"> Journal Prompts</a> | <a href="#sc3">Mindfulness & Meditation</a>
+                </div>
+            </div>
+        </div>
+
+        <a name="sc1"></a>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="selfcare-img affirmation"></div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="selfcare-tip">
+                    <h2>Daily Affirmations</h2>
+                    <ul class="selfcare-txt">
+                        <li>"I am deserving of love, happiness, and peace."</li>
+                        <li>"I trust myself to make the best choices for me."</li>
+                        <li>"I am grateful for my journey and proud of my progress."</li>
+                        <li>"I am enough just as I am."</li>
+                        <li>"I choose to nourish my mind, body, and spirit."</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a name="sc2"></a>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="selfcare-img journal"></div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="selfcare-tip">
+                    <h2>Journal Prompts</h2>
+                    <h4>Pick One Prompt</h4>
+                    <ul class="selfcare-txt">
+                        <li>“What am I proud of accomplishing this week?”</li>
+                        <li>“What’s one thing I’m grateful for today?”</li>
+                        <li>“What do I want to focus on improving this month?”</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a name="sc3"></a>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="selfcare-img meditate"></div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="selfcare-tip">
+                    <h2>Mindfulness and Meditation</h2>
+                    <h4>5-4-3-2-1 Grounding Method</h4>
+                    <small>This exercise helps calm your mind by focusing on your surroundings. Take a deep breath and notice:</small>
+                    <ul class="selfcare-txt">
+                        <li>5 things you can see around you.</li>
+                        <li>4 things you can feel, like the texture of your clothes or the surface beneath you.</li>
+                        <li>3 things you can hear, whether they’re nearby sounds or in the distance.</li>
+                        <li>2 things you can smell, like fresh air or a nearby scent.</li>
+                        <li>1 thing you can taste, even if it’s just the hint of your last meal or a sip of water.</li>
+                    </ul>
+                    <small>This grounding exercise is a quick way to bring yourself back to the present and find calm.</small>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <small>pretty & powerful</small>
+        </footer>
+    </div>
+
+</body>
+</html>

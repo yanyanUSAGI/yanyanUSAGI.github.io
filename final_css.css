@@ -1,0 +1,616 @@
+div#sizeInfo {position: fixed;
+    box-sizing: border-box;
+    background-color: yellow;
+    width: 100px;
+    height: 50px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+    display: block; /* change to none later */}
+
+/**************************************************************small- default values less than 501px -no media query**************************************************************/
+@font-face {
+    font-family: font1;
+    src: url(final-project/AppleGaramond-Light.ttf);
+}
+
+body {background-color: white;
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 100;
+    color: #2f2f2f;}
+    
+.container {position: static;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;}
+
+.row {background-color: transparent;
+    display: flex;
+    align-items: start;}
+
+header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    background-color: #fee8e8;
+    padding: 0 20px;
+}
+
+div#logo img {
+    position: static;
+    height: 100px;
+    width: auto;
+}
+
+@font-face {
+    font-family: font2;
+    src: url(final-project/Monoline.otf);
+}
+
+div#title h1 {
+    text-align: left;
+    font-family: font2;
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.189);
+}
+
+nav {position: fixed;
+    box-sizing: border-box;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    padding-top: 0px;
+    background-color: #ffe8e8;
+    text-align: center;}
+
+footer {position: static;
+    box-sizing: border-box;
+    background-color: #fee8e8;
+    width: 100%;
+    height: 150px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: font2;
+    border-top: 2px solid #f9c8c839;}
+
+footer small {font-size: 50px;
+    color: white;
+    font-weight: 550;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.189);}
+
+    /*style menu button for nav*/
+    .dropbtn {background-color: #ffcee2;
+    color: #2f2f2f;
+    padding: 16px;
+    font-size: 20px;
+    font-family: font1;
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;}
+    
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #fff3fa;
+        color: #2f2f2f;
+    }
+    
+    /*position dropdown menu*/
+    .dropdown {position: relative;
+    display: inline-block;}
+    
+    /*style the dropdown menu*/
+    .dropdown-content {
+        display: none; /*change to none when done styling*/
+        position: absolute;
+        background-color: #ffe8e8;
+        color: white;
+        min-width: 160px;
+        z-index: 1;
+        bottom: 32px; /*NOTE- should be 50px*/
+        left: 0px;
+    }
+    
+    /*style dropdown links*/
+    .dropdown-content a {
+        display: block;
+        color: white;
+        font-family: font1;
+        font-style: 16px;
+        padding: 16px;
+        border-bottom: 1px solid white;
+        text-decoration: none;
+    }
+    
+    /*style dropdown links when hovered over*/
+    .dropdown a:hover {
+        background-color: #ffe1ed;
+        color: #2f2f2f;
+    }
+    
+    /*define show class for javascript to make dropdown appear*/
+    .show {display: block;}
+
+#hero-home {position: relative;
+    box-sizing: border-box;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/desk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 400px;
+    margin-top: 0px;}
+
+#hero-home h1 {font-family: font3;
+    color: white;
+    max-width: 90%;
+    font-size: 50px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+div#value-prop, #highlight-challenge, #highlight-blog, #highlight-selfcare, #home-chiikawa {
+    box-sizing: border-box;
+    border: 1px solid #2f2f2f3c;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    font-family: font1;
+    padding: 2px; 
+    text-align: center;
+    overflow-wrap: break-word;
+    margin: 10px 5px 10px 5px;
+    background-color: white;
+}
+
+#home-chiikawa {height: 300px;
+    background-image: url(final-project/chiikawacheer.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;}
+
+div#highlight-challenge{
+    height: auto;
+}
+
+div#highlights {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 2px; 
+    overflow-wrap: break-word;
+    margin: 10px 5px 10px 5px;
+}
+
+div#highlights-img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    background-image: url('final-project/mini.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+@font-face {
+    font-family: font3;
+    src: url(final-project/AppleGaramond-Bold.ttf);
+}
+
+div#highlight-selfcare {
+    height: auto;
+    width: auto;
+    margin: 10px 5px 10px 5px;
+}
+
+#highlight-selfcare p {font-family: font3;
+    font-size: 25px;}
+
+/*nutrition pg*/
+
+div#hero-nutrition {
+    position: relative;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/heronutrition.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 200px;
+    margin-top: 0px;
+}
+
+#hero-nutrition h1 {font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+#recipe-list, #selfcare-list, #workout-list {font-family: font1;
+    color: #dc92af;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #2f2f2f3c;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;}
+
+#recipe-list a, #selfcare-list a, #workout-list a {color: #dc92af;}
+
+.recipe {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 2px; 
+    overflow-wrap: break-word;
+    margin: 20px 15px 20px 15px;
+}
+
+.recipe-img {
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px #ffcdcd3c;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 20px 15px 20px 15px;
+    width: 100%;
+    height: 400px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.breakfast {background-image: url('final-project/breakfastyogurt.jpg');}
+.lunch {background-image: url('final-project/chickensaladlunch.jpg');}
+.dinner {background-image: url('final-project/steakdinner.jpg');}
+.dessert {background-image: url('final-project/dessert.jpg');}
+
+.checklist {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul {text-align: left;
+    margin-left: 15px;}
+
+/*selfcare*/
+#hero-selfcare {position: relative;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/selfcare.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 400px;
+    margin-top: 0px;}
+
+#hero-selfcare h1 {font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+.selfcare-img {
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px #ffcdcd3c;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 20px 15px 20px 15px;
+    width: 100%;
+    height: 400px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.affirmation {background-image: url('final-project/crystals.jpg')}
+.journal {background-image: url('final-project/journal.jpg');}
+.meditate {background-image: url('final-project/meditate.jpg');}
+
+.selfcare-tip {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 2px; 
+    overflow-wrap: break-word;
+    margin: 20px 15px 20px 15px;
+}
+
+.selfcare-tip h2 {font-family: font3;}
+
+.selfcare-txt {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    font-family: font1;
+}
+
+.selfcare-tip small {font-size: 18px;}
+
+/*blog*/
+#hero-blog {position: relative;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/blog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 400px;
+    margin-top: 0px;}
+
+#hero-blog h1 {font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+.blog-img {
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px #ffcdcd3c;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 20px 15px 20px 15px;
+    width: 100%;
+    height: 400px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.energy {background-image: url('final-project/morning.jpg')}
+.motivation {background-image: url('final-project/wellness.jpg');}
+
+.blog {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 2px; 
+    overflow-wrap: break-word;
+    margin: 20px 15px 20px 15px;
+}
+
+.blog h2, .blog li {font-weight: bold;}
+
+/*workout*/
+#hero-workout {position: relative;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/lesserafim.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 400px;
+    margin-top: 0px;}
+
+#hero-workout h1 {font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+.workout-txt {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 2px; 
+    overflow-wrap: break-word;
+    margin: 20px 15px 20px 15px;
+}
+
+.workout-video {
+    border: 1px solid transparent;
+    background-color: white;
+    margin: 20px 15px 20px 15px;
+}
+
+.workout-video iframe {width: 100%;}
+
+.yoga-img {
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px 2px #ffcdcd3c;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0;
+    margin: 20px 15px;
+    width: 100%;
+    height: 230px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+}
+
+.yoga-img h2 {
+    font-family: font3;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.577);
+}
+
+    
+.yoga {background-image: url('final-project/yoga.jpg')}
+
+.workout-section {}
+
+.workout-section {
+    text-align: center;
+    background-color: #ffe8e8;
+    width: 100%;
+    height: 200px;
+    margin-top: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.workout-section h1 {
+    font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.189);
+    margin: 0; 
+}
+
+/*contact*/
+
+#hero-contact {position: relative;
+    background-color: #ffe8e8;
+    width: 100%;
+    background-image: url(final-project/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    height: 400px;
+    margin-top: 0px;}
+
+#hero-contact h1 {font-family: font3;
+    color: white;
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    text-shadow: 3px 3px 3px rgba(116, 67, 67, 0.749);
+    bottom: 20px;
+    left: 20px; 
+    margin: 0;}
+
+.contact-txt {
+    border: 1px solid #2f2f2f3c;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    font-family: font1;
+    padding: 15px; 
+    overflow-wrap: break-word;
+    margin: 20px 15px 20px 15px;
+}
+
+/***********************large - 661 to 999px*************************/
+@media (min-width: 661px) {
+
+    div#title h1 {
+        text-align: left;
+        font-family: font2;
+        color: white;
+        font-size: 80px;
+        font-weight: 500;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.189);
+    }
+
+    div#logo img {
+        position: static;
+        height: 200px;
+        width: auto;
+    }
+
+    header {height: 150px;}
+
+    div#main {width: 900px;}
+
+    nav {display: block;
+    position: static;}
+
+    div#value-prop {height: 490px;
+        text-align: center;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+
+    
+    div#highlight-selfcare {
+        padding: 100px;
+        height: 300px;
+        width: 100%;
+        margin: 10px 5px;
+        text-align: center;
+    }
+
+    div#highlight-blog {
+        padding: 114px;
+        height: auto;
+        width: 100%;
+        margin: 10px 5px;
+        text-align: center;
+    }
+
+    .dropbtn {display: none;}
+
+    #myDropdown {
+        display: block;
+        position: static;
+        padding: 0px;
+    }
+
+    .dropdown-content a {display: inline-block;
+    font-size: 24px;
+    padding: 10px 15px 10px 15px;
+    border-bottom: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin-right: -4px;}
+}
+
+div#hero-home {height: 500px;}
+
+/*nutrition pg*/
+
+/***********************x-large - 1000px and up*************************/
+@media (min-width: 1500px) {
+    header {width: 100%;}
+    footer {clear: both;}
+
+    div#hero-home {height: 700px;}
+
+}

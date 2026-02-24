@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+
+    <style>
+
+        /*HIGH 1000 pixels or wider -Chiikawa*/
+
+        body {background-color: #f49090;
+            background-image: url(pics/chiikawabg.jpg);
+            background-repeat: repeat-x repeat-y;
+            background-size: contain;}
+
+        div#main {position: static;
+            box-sizing: border-box;
+            background-color: #fcfbfa;
+            background-image: linear-gradient(#FCFFFA, #f8eaed);
+            width: 1000px;
+            min-height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;}
+
+        header {text-align: center;}
+
+        @font-face {
+            font-family: font1;
+            src: url(fonts/supercreamy.ttf);
+        }
+
+        h1 {font-size: 55px;
+            font-family: font1;
+            margin-bottom: 15px;
+            margin-top: 0px;
+            letter-spacing: 3px;
+            word-spacing: 5px;
+            color: #f8eaed;
+            text-shadow: 3px 3px 3px #98CCF4;}
+
+        @font-face {
+            font-family: font2;
+            src: url(fonts/TitilliumWeb-Bold.ttf);
+        }
+
+        h2 {font-size: 30px;
+            font-family: font2;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-left: 20px;
+            color: #462e2a;}
+        
+        h3 {font-size: 25px;
+            font-family: font2;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-left: 20px;
+            color: #462e2a;}
+
+        @font-face {
+            font-family: font3;
+            src: url(fonts/TitilliumWeb-Light.ttf);
+        }
+
+        p {font-family: font3;
+            color: #462e2a;
+            font-size: 20px;
+            line-height: 22px;
+            padding-left: 20px;
+            padding-right: 20px;}
+
+        .large {display: block;}
+
+        .medium,
+        .small,
+        .tiny {display: none;}
+
+        .gif-large {
+            display: block;}
+
+        .responsive {max-width: 300px;
+            margin-right: 20px;}
+
+        img.responsive.gif-large {
+            float: right;}
+
+        .gif-medium,
+        .gif-small,
+        .gif-tiny {display: none;}
+            
+        footer {background-color: transparent;
+                border-top: 2px solid rgba(0, 0, 0, 0.104);
+                text-align: center;}
+
+        /*MED  661 and 999 pixels- Hachiware*/
+        @media screen and (max-width:999px) and (min-width:661px) {
+            body {background-color: blue;
+            background-image: url(pics/hachiwarebg.jpg);
+            background-repeat: repeat-x repeat-y;
+            background-size: contain;}
+
+            .medium {display: block;}
+
+            .large, .small, .tiny {display: none;}
+
+            .gif-medium {display: block;}
+
+            img.responsive.gif-medium {
+                width: 70%;
+                float: right;}
+
+            .gif-large, .gif-small, .gif-tiny {display: none;}
+
+            div#main {width: 90%;
+                background-image: linear-gradient(#DCE7FA, #98CCF4);
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;}
+
+            p {font-size: 18px;
+                line-height: 24px;}
+
+            h1 {color: #98CCF4;
+                text-shadow: 3px 3px 3px #6883b2;}
+        }
+
+        /*SMALL 501 and 660 pixels- Momonga*/
+        @media screen and (max-width:660px) and (min-width:501px) {
+            body {background-color: cyan;
+                background-image: url(pics/momongabg.jpg);
+                background-repeat: repeat-x repeat-y;
+                background-size: contain;}
+
+            .small {display: block;}
+
+            .large, .medium, .tiny {display: none;}
+
+            .gif-small {display: block;}
+
+            img.responsive.gif-small {
+                width: 90%;
+                float: none;
+                margin: 0 auto;}
+
+            .gif-large, .gif-medium, .gif-tiny {display: none;}
+
+            div#main {width: 80%;
+                background-image: linear-gradient(#EDF7ED,#CDE9E5);
+                border: 5px solid #CDE9E5;}
+
+            p {font-size: 25px;
+                line-height: 30px;}
+
+            h1 {color: #CDE9E5;
+                text-shadow: 3px 3px 3px #1ba9dc;
+                font-size: 60px;}
+            
+            h2 {font-size: 40px;
+                text-align: center;}
+            
+            h3 {font-size: 30px;}
+        }
+
+        /*TINY 500 pixels and narrower -Usagi*/
+        @media screen and (max-width:500px) {
+            body {background-color: #ffec17;
+                background-image: url(pics/usagibg.jpg);
+                background-repeat: repeat-x repeat-y;
+                background-size: contain;
+                margin: 0px;}
+
+            .tiny {display: block;}
+
+            .large, .medium, .small {display: none;}
+
+            .gif-tiny {display: block;}
+
+            img.responsive.gif-tiny {
+                width: 100%;
+                float: none;
+                margin: 0 auto;}
+
+            .gif-large, .gif-medium, .gif-small {display: none;}
+
+            div#main {width: 70%;
+                background-image: linear-gradient(#F5F4DD,#F4EED8);}
+
+            p {font-size: 25px;
+                line-height: 30px;}
+
+            h1 {color: #eedb95;
+                text-shadow: 3px 3px 3px #a48f19;
+                font-size: 60px;}
+            
+            h2 {font-size: 40px;
+                text-align: center;}
+            
+            h3 {font-size: 30px;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+        <header>
+            <h1 class = "large">Chiikawa Theme</h1>
+            <h1 class = "medium">Hachiware Theme</h1>
+            <h1 class = "small">Momonga Theme</h1>
+            <h1 class = "tiny">Usagi Theme</h1>
+        </header>
+
+        <h2>Chiikawa Show Summary</h2>
+
+
+        <img src="pics/chiikawa.gif" alt="Chiikawa Peace" class="gif-large responsive">
+        <img src="pics/hachiware.gif" alt="Hachiware Eat" class="gif-medium responsive">
+        <img src="pics/momonga.gif" alt="Momonga Point" class="gif-small responsive">
+        <img src="pics/usagi.gif" alt="Usagi Dance" class="gif-tiny responsive">
+
+
+
+        <p>
+        Chiikawa (ちいかわ) is a Japanese manga series by Nagano. It has been serialized online via Twitter since January 2020 and its being collected into volumes by Kodansha. An anime television series adaptation directed by Takenori Mihara at Doga Kobo premiered on April 2022. The episodes are released on Fuji TV's Mezamashi TV morning news program and Youtube.
+        </p>
+
+        <h3>Plot:</h3>
+
+        <p>
+        The story follows the sometimes happy, sometimes sad, and a tad stressful daily life of "some sort of small, cute creature" known as Chiikawa. Chiikawa enjoys delicious food with bees and rabbits, toils hard every day for the rewards of work, and still maintains a smile.
+        </p>
+
+        <h3>Characters:</h3>
+
+        <h3>Chiikawa (ちいかわ)</h3>
+
+        <p>
+        A little critter who lives in a big house. Very small, cute and easily moved to tears, shy and scared of every monster they meet. However, they always try to be stronger, and be a good friend who helps their friends when they're in trouble. In the series, Chiikawa is shown to be emotionally sensitive, timid, and physically weak. Because of this, they are often times the scaredy-cat of the trio, being easily frightened and prone to crying. 
+        </p>
+        
+        <p>
+        They are also shown to be shy in social situations, usually relying on Hachiware to talk for the both of them. Much like Hachiware, Chiikawa is shown to have artistic passions, specifically dancing and singing. However, their stage fright and timid nature prevents them from singing confidently in front of an audience, even if it is familiar people.
+        </p>
+
+        <p>
+        Despite being meek and physically lacking, Chiikawa has exhibited selfless behaviour in dangerous situations, specifically when Hachiware and Usagi are involved. Chiikawa is often the first to throw themselves in the face of danger in attempt to protect their friends, though since they are the weakest in the trio, it is usually Hachiware or Usagi who ends up saving them. Chiikawa is even shown to feel guilt at their own incompetence. However, Chiikawa's remarkable perserverance means they often are willing to try things again even after failure, such as the Weed Pulling License exam.
+        </p>
+
+        <h3>
+        Hachiware (ハチワレ)
+        </h3>
+
+        <p>
+        Hachiware looks like a cat but is not one. Hachiware is noted to be the most erudite and curious of the three. They have an interest in reading books and a rather competent vocabulary for a child their age. They are also the most extroverted of the trio, often speaking on both theirs and Chiikawa's behalf, and easily striking up conversation and making friends with fellow animals and Yoroi-san.
+        </p>
+
+        <p>
+        They are also notably the most mature of the three. In the Pajama Party arc, they take responsibility for their mistakes on stage, and resolves to work harder. They also try their best to comfort Chiikawa when the latter is upset. With their intelligence, Hachiware is also capable of creating solutions for problems they encounter, but has a tendency to hesitate or overthink their decisions.
+        </p>
+        
+        <p>
+        Hachiware has shown interest in artistic pursuits. They spent a portion of time saving up money to buy a camera to pursue their photography hobby, and they also own a guitar and is sometimes shown playing and singing along with it.
+        </p>
+
+        <h3>Usagi (うさぎ)</h3>
+
+        <p>
+        Usagi (lit. rabbit) looks like a rabbit but is not one. Their language is the same as Chiikawa's, and they tend to shout rather than speak quietly. Usagi has a mischievous, hyper, and chaotic personality. They often do what they like without much regard for social etiquette, as seen in earlier episodes where they dirty themselves by playing on a gigantic piece of pudding, and proceeded to ravenously eat a pancake with little-to-no regard for table manners.
+        </p>
+
+        <p>
+        Usagi is also shown to be the most decisive, and occasionally the most fearless and competent of the main trio. When rescuing the three members of Pajama Party, Usagi is the first one to notice their predicament, and to run to save them
+        </p>
+
+        <h3>Momonga (モモンガ)</h3>
+        <p>
+        A flying squirrel who is often seen begging for attention and praises, stealing food, and causing troubles for other characters. It's name comes from the Japanese word "momonga", which means flying squirrel. Momonga is a hyperactive and slightly mean flying squirrel. 
+        </p>
+
+        <p>
+        It is always acting cute and begging for all sorts of things. Personality wise, she appears self-centered and always wants to get what she wants. Even during dangerous situations, it would ask for food and rest. Momonga also has the tendency to imitate other cute characters, notably Chiikawa. It often imitates Chiikawa's yawning and crying.
+        </p>
+
+        <footer>
+            <small>
+                <a href="https://www.wikipedia.org" target="_blank">
+                    Text Source
+                </a>
+            </small>
+        </footer>
+
+
+    </div>
+
+
+    
+</body>
+</html>

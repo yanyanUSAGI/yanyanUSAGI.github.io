@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Embedding Video</title>
+        <style>
+            body {background-color: lavender;}
+        </style>
+    </head>
+    <body>
+        <h1>Embedding Video</h1>
+
+        <video width="600" height="400" controls loop>
+            <!--for browsers that support webm video-->
+            <source src="ice_hockey.webm" type="video/webm">
+            <!--for browsers that dont support webm video-->
+            <source src="ice_hockey.mp4" type="video/mp4">
+        </video>
+        
+        <br><br>
+
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RC6wQ-75uQU?si=PuxW4oCQwAYyqUeB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </body>
+</html>
